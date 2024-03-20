@@ -58,18 +58,11 @@
     HandleLidSwitchExternalPower=ignore
   '';
 
-  # kde connect
-  networking.firewall = rec {
-    allowedTCPPortRanges = [{ from = 1714; to = 1764; }];
-    allowedUDPPortRanges = allowedTCPPortRanges;
-  };
-
   # user
   users.users.${username} = {
     isNormalUser = true;
     initialPassword = username;
     extraGroups = [
-      "nixosvmtest"
       "networkmanager"
       "wheel"
       "audio"
@@ -95,7 +88,6 @@
   # bootloader
   boot = {
     tmp.cleanOnBoot = true;
-    supportedFilesystems = [ "ntfs" ];
     loader = {
       timeout = 2;
       systemd-boot.enable = true;

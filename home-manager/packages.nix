@@ -12,32 +12,26 @@
     (import ./colorscript.nix { inherit pkgs; })
 
     # gui
-    obsidian
     (mpv.override { scripts = [mpvScripts.mpris]; })
     libreoffice
-    spotify
     caprine-bin
     d-spy
-    github-desktop
     gimp
-    transmission_4-gtk
-    discord
-    teams-for-linux
     icon-library
     dconf-editor
 
     # tools
-    steam-run # fhs envs
     bat
-    eza
     fd
-    ripgrep
     fzf
-    libnotify
-    killall
-    zip
-    unzip
     glib
+    killall
+    libnotify
+    lsd
+    ripgrep
+    steam-run # fhs envs
+    unzip
+    zip
 
     # fun
     glow

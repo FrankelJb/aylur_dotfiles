@@ -22,7 +22,6 @@ in
     ./stm.nix
     ./sway.nix
     ./theme.nix
-    ./tmux.nix
     ./wezterm.nix
   ];
 

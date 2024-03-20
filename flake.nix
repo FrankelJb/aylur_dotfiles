@@ -1,9 +1,9 @@
 {
-  description = "Home Manager and NixOS configuration of Aylur";
+  description = "Home Manager and NixOS configuration forked from Aylur";
 
   outputs = { home-manager, nixpkgs, ... }@inputs: let
-    username = "demeter";
-    hostname = "nixos";
+    username = "beans";
+    hostname = "helium";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -14,7 +14,7 @@
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs username hostname asztal; };
-      modules = [ ./nixos/configuration.nix ];
+      modules = [ ./helium/configuration.nix ];
     };
 
     homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {

@@ -26,16 +26,9 @@
       gedit
     ]) ++ (with pkgs.gnome; [
       cheese # webcam tool
-      gnome-music
       epiphany # web browser
-      geary # email reader
       evince # document viewer
       gnome-characters
-      totem # video player
-      tali # poker game
-      iagno # go game
-      hitori # sudoku game
-      atomix # puzzle game
       yelp # Help view
       gnome-contacts
       gnome-initial-setup
@@ -58,9 +51,6 @@
   programs.dconf.profiles = {
     gdm.databases = [{
       settings = {
-        "org/gnome/desktop/peripherals/touchpad" = {
-          tap-to-click = true;
-        };
         "org/gnome/desktop/interface" = {
           cursor-theme = "Qogir";
         };
